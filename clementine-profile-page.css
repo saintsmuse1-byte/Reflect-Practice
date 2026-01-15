@@ -1,0 +1,158 @@
+.clementine-profile-wrapper {
+  display: contents;
+}
+ 
+.clementine-profile-container1 {
+  display: contents;
+}
+ 
+.clementine-profile-thq-psychologist-profile-grid-elm {
+  background-size: cover;
+  background-image: url("public/tropical-beach-with-waterbungalows-maldives-1500w.jpg");
+}
+ 
+.clementine-profile-thq-psychologist-profile-visual-elm {
+  height: 399px;
+  background-size: cover;
+  background-image: url("public/tropical-beach-with-waterbungalows-maldives-1500w.jpg");
+  background-position: bottom left;
+}
+ 
+.clementine-profile-thq-psychologist-profile-image-wrapper-elm {
+  width: 359px;
+  height: 355px;
+  transform: translateX(-200px);
+  align-self: flex-end;
+}
+ 
+.clementine-profile-thq-psychologist-profile-image-elm {
+  width: 383px;
+  height: 382px;
+}
+ 
+.clementine-profile-thq-psychologist-profile-hero-title-elm {
+  fill: var(--color-on-primary);
+  color: var(--color-on-primary);
+  display: flex;
+  font-size: 80px;
+  transform: translateX(-100px) translateY(-150px);
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-heading);
+  line-height: var(--line-height-heading);
+  margin-bottom: var(--spacing-md);
+  letter-spacing: var(--letter-spacing-heading);
+}
+ 
+.clementine-profile-thq-psychologist-profile-about-elm {
+  gap: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+}
+ 
+.clementine-profile-thq-psychologist-profile-about-content-elm {
+  gap: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+}
+ 
+.clementine-profile-thq-psychologist-profile-bio-elm1 {
+  width: 100%;
+}
+ 
+.clementine-profile-thq-psychologist-profile-approach-elm {
+  gap: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+}
+ 
+.clementine-profile-thq-psychologist-profile-approach-content-elm {
+  gap: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+}
+ 
+.clementine-profile-thq-psychologist-profile-qualifications-section-elm {
+  gap: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+}
+ 
+.clementine-profile-thq-psychologist-profile-cta-link-elm {
+  display: block;
+  margin-top: var(--spacing-lg);
+  text-decoration: none;
+}
+ 
+.clementine-profile-container2 {
+  display: none;
+}
+ 
+.clementine-profile-container3 {
+  display: contents;
+}
+ 
+
+ 
+@media(max-width: 991px) {
+  .clementine-profile-thq-psychologist-profile-hero-title-elm {
+    font-size: var(--font-size-3xl);
+  }
+}
+ 
+@media(max-width: 767px) {
+  .clementine-profile-thq-psychologist-profile-hero-title-elm {
+    font-size: var(--font-size-2xl);
+  }
+}
+ 
+@media(max-width: 479px) {
+  .clementine-profile-thq-psychologist-profile-hero-title-elm {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-sm);
+  }
+}
+
+.clementine-profile-page-container1 {
+  width: 100%;
+  display: flex;
+  min-height: 100vh;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+ 
+.clementine-profile-page-link {
+  display: contents;
+}
+ 
+.clementine-profile-page-container2 {
+  right: 50px;
+  border: 1px solid #ffffff5c;
+  bottom: 30px;
+  display: flex;
+  z-index: 22;
+  position: fixed;
+  box-shadow: 5px 5px 10px 0px rgba(31, 31, 31, 0.4);
+  min-height: auto;
+  align-items: center;
+  padding-top: 8px;
+  padding-left: 12px;
+  border-radius: 8px;
+  padding-right: 12px;
+  padding-bottom: 8px;
+  backdrop-filter: blur(6px);
+  background-color: rgba(41, 41, 41, 0.41);
+}
+ 
+.clementine-profile-page-icon1 {
+  width: 24px;
+  margin-right: 4px;
+}
+ 
+.clementine-profile-page-text {
+  color: white;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
