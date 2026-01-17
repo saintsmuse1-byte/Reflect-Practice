@@ -8,7 +8,7 @@
  
 .fleur-profile-thq-psychologist-profile-grid-elm {
   background-size: cover;
-  background-image: url("public/tropical-beach-with-waterbungalows-maldives-1500w.jpg");
+  background-image: <img src="images/lillies.jpg" alt="Fleur header" /> ;
 }
  
 .fleur-profile-thq-psychologist-profile-visual-elm {
