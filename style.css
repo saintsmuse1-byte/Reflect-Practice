@@ -1636,11 +1636,12 @@
   transform: scale(1.08);
 }
  
-.psychologist-profile-intro {
-  padding: var(--spacing-2xl);
-  background: color-mix(in oklab, var(--color-primary) 8%, white);
-  border-left: 4px solid var(--color-primary);
-  border-radius: var(--border-radius-md);
+.psychologist-profile-qual-item:hover {
+  transform: translateX(4px);
+  background-image: url("./images/water-ripple.jpg");
+  background-size: cover;       /* makes it fill the entire block */
+  background-position: center;  /* centers the image nicely */
+  background-repeat: no-repeat; /* avoids tiling */
 }
  
 .psychologist-profile-intro  span {
@@ -1663,7 +1664,10 @@
  
 .psychologist-profile-qual-item:hover {
   transform: translateX(4px);
-  background: color-mix(in oklab, var(--color-secondary) 10%, white);
+  background-image: url("./images/water-ripple.jpg");
+  background-size: cover;       /* makes it fill the entire block */
+  background-position: center;  /* centers the image nicely */
+  background-repeat: no-repeat; /* avoids tiling */
 }
  
 .BodyFont {
