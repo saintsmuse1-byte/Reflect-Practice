@@ -61,7 +61,7 @@
   border-radius: var(--dl-layout-radius-radius4);
   backdrop-filter: brightness(50%) contrast(50%);
   background-size: cover;
-  background-image: url("public/anastasiya-romanova-ftnyenu74_a-unsplash1-1500h.jpg");
+  background-image: url("./images/reflection-trees.jpg");
 }
  
 .home-thq-hero-title-elm {
