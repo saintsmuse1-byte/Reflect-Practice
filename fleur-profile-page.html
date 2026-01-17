@@ -1,94 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Fleur-Profile-Page - Frizzy Live Dog</title>
-    <meta property="og:title" content="Fleur-Profile-Page - Frizzy Live Dog" />
+<head>
+    <title>Fleur Profile - Reflect</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
-    <meta property="twitter:card" content="summary_large_image" />
-
-    <style data-tag="reset-style-sheet">
-      html { line-height: 1.15;} body { margin: 0;} * { box-sizing: border-box; border-width: 0; border-style: solid; -webkit-font-smoothing: antialiased;} p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption { margin: 0; padding: 0;} button { background-color: transparent;} button,input,optgroup,select,textarea { font-family: inherit; font-size: 100%; line-height: 1.15; margin: 0;} button,select { text-transform: none;} button,[type="button"],[type="reset"],[type="submit"] { -webkit-appearance: button; color: inherit;} a { color: inherit; text-decoration: inherit;} img { display: block;} html { scroll-behavior: smooth }
-    </style>
-    <style data-tag="default-style-sheet">
-      html { font-family: Lato; font-size: 1rem; }
-      body { font-weight: 400; font-style:normal; letter-spacing: 0.01em; line-height: 1.6; color: var(--color-on-surface); background: var(--color-surface); fill: var(--color-on-surface); }
-      
-      /* THE CALMING HOVER FIX */
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@300;400;600;800&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap" />
+    
+    <style>
+      .profile-header-container {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        border-radius: var(--border-radius-lg);
+        background: url('https://images.pexels.com/photos/3933426/pexels-photo-3933426.jpeg?auto=compress&cs=tinysrgb&w=1500') center/cover no-repeat;
+      }
+      .profile-name-overlay {
+        color: white;
+        font-family: var(--font-family-heading);
+        font-weight: 800; /* Extra Bold */
+        font-size: clamp(3rem, 10vw, 6rem);
+        text-shadow: 0px 10px 30px rgba(0, 0, 0, 0.7); /* Deep Shadow */
+        letter-spacing: 0.05em;
+        z-index: 2;
+      }
       .psychologist-profile-qual-item {
-        transition: all 0.4s ease;
-        background-color: white; /* Base color */
+        transition: all 0.3s ease;
+        background-color: var(--color-surface);
+        border: 1px solid var(--color-border);
+        padding: var(--spacing-md);
+        border-radius: var(--border-radius-md);
+        margin-bottom: var(--spacing-sm);
       }
       .psychologist-profile-qual-item:hover {
-        background-image: none !important; /* Removes the ripple image on hover */
-        background-color: #bcd4d4 !important; /* Soft Duck Egg Blue */
+        background-color: #bcd4d4 !important; /* Duck Egg Blue */
         transform: translateY(-2px);
       }
+      .profile-main-content {
+        max-width: 800px;
+        margin: var(--spacing-4xl) auto;
+        padding: 0 var(--spacing-xl);
+      }
     </style>
-    <link rel="stylesheet" href="https://unpkg.com/animate.css@4.1.1/animate.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;1,300&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700&display=swap" />
-  </head>
-  <body>
-    <link rel="stylesheet" href="./style.css" />
-    <div>
-      <link href="./fleur-profile-page.css" rel="stylesheet" />
-      <div class="fleur-profile-page-container1">
-        <div class="fleur-profile-container1 fleur-profileroot-class-name">
-          <section class="psychologist-profile-section">
-            <div class="psychologist-profile-container">
-              <div class="fleur-profile-thq-psychologist-profile-grid-elm psychologist-profile-grid">
-                <article class="psychologist-profile-card">
-                  
-                  <div class="fleur-profile-thq-psychologist-profile-visual-elm psychologist-profile-visual"
-                    style="background-image: url('images/lillies.jpg'); background-size: cover; background-position: center; border-radius: 20px; height: 220px; display: flex; align-items: center; justify-content: center; border: none;">
-                    <h1 style="color: white; font-family: 'Source Serif 4', serif; font-weight: 300; font-size: 4rem; text-shadow: 2px 2px 8px rgba(0,0,0,0.2);">
-                      Fleur
-                    </h1>
-                  </div>
-
-                  <div class="psychologist-profile-content">
-                    <div class="psychologist-profile-intro">
-                      <span>I am a 52-year-old mother of two with a deep appreciation for people, life transitions, and the many challenges that adulthood can bring. My focus within our online support service draws on both my professional background and my lived experience across different countries, careers, and stages of life.</span>
-                    </div>
-                    <div class="fleur-profile-thq-psychologist-profile-about-elm">
-                      <h2 class="psychologist-profile-subsection-title">About Me</h2>
-                      <p class="psychologist-profile-bio">I have lived and worked in the UK, France, Zimbabwe, and South Africa, experiences that have given me a broad cultural perspective and a deep respect for different life journeys. Alongside my personal roles as a mother, wife, and business owner, I bring a grounded, empathetic presence shaped by decades of navigating change, responsibility, and growth.</p>
-                    </div>
-                    <div class="fleur-profile-thq-psychologist-profile-approach-elm">
-                      <h2 class="psychologist-profile-subsection-title">My Approach</h2>
-                      <p class="psychologist-profile-bio">My approach is calm, empathetic, and non-judgmental. I believe deeply in the importance of being heard and understood, especially during times of transition, uncertainty, or emotional overwhelm. I aim to provide a supportive space where clients can reflect, talk things through, and gain clarity at their own pace.</p>
-                      <p class="psychologist-profile-bio">In addition to emotional support, I am able to support individuals who are considering starting their own business or who are already self-employed and feeling unsure, overwhelmed, or isolated.</p>
-                    </div>
-                    <div class="fleur-profile-thq-psychologist-profile-qualifications-section-elm">
-                      <h2 class="psychologist-profile-subsection-title">Qualifications &amp; Experience</h2>
-                      <div class="psychologist-profile-qualifications">
-                        <div class="psychologist-profile-qual-item">
-                           <span class="psychologist-profile-qual-text">BA (Psychology Major), Rhodes University</span>
-                        </div>
-                        <div class="psychologist-profile-qual-item">
-                           <span class="psychologist-profile-qual-text">Volunteer experience with Lifeline suicide hotline</span>
-                        </div>
-                        <div class="psychologist-profile-qual-item">
-                           <span class="psychologist-profile-qual-text">Microsoft Certified Systems Engineer (IT Manager)</span>
-                        </div>
-                        <div class="psychologist-profile-qual-item">
-                           <span class="psychologist-profile-qual-text">Founder and owner of Eye-Dears (Art Business)</span>
-                        </div>
-                      </div>
-                    </div>
-                    <a href="Book.html">
-                      <div class="btn btn-primary psychologist-profile-cta">
-                        <span>Book Consultation</span>
-                      </div>
-                    </a>
-                  </div>
-                </article>
-              </div>
-            </div>
-          </section>
+</head>
+<body>
+    <header class="navigation-wrapper">
+      <div class="navigation-container">
+        <div class="navigation-left">
+          <ul class="navigation-list">
+            <li class="navigation-item"><a href="index.html" class="navigation-link">Home</a></li>
+            <li class="navigation-item"><a href="about.html" class="navigation-link">About Us</a></li>
+          </ul>
         </div>
+        <div class="navigation-center">
+          <a href="index.html" class="navigation-logo-link">
+            <div class="navigation-logo-content">
+              <span class="section-title">Reflect</span>
+            </div>
+          </a>
+        </div>
+        <div class="navigation-right">
+          <ul class="navigation-list">
+            <li class="navigation-item"><a href="services.html" class="navigation-link">Services</a></li>
+            <li class="navigation-item">
+              <a href="book.html" class="btn btn-primary btn-sm">Book Session</a>
+            </li>
+          </ul>
+        </div>
+        <button id="navToggle" class="navigation-mobile-toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      </div>
+    </header>
+
+    <div id="mobileOverlay" class="navigation-mobile-overlay">
+      <div class="navigation-mobile-header">
+        <span class="section-title">Reflect</span>
+        <button id="closeToggle" class="navigation-mobile-close">✕</button>
+      </div>
+      <div class="navigation-mobile-body">
+        <ul class="navigation-mobile-list">
+          <li><a href="index.html" class="navigation-mobile-link">Home</a></li>
+          <li><a href="about.html" class="navigation-mobile-link">About Us</a></li>
+          <li><a href="services.html" class="navigation-mobile-link">Services</a></li>
+        </ul>
       </div>
     </div>
-  </body>
+
+    <main class="profile-main-content">
+      <div class="profile-header-container">
+        <h1 class="profile-name-overlay">Fleur</h1>
+      </div>
+
+      <div style="margin-top: var(--spacing-3xl);">
+        <p class="section-content">I am a 52-year-old mother of two with a deep appreciation for people, life transitions, and the quiet power of reflection. Having lived across the UK, France, Zimbabwe, and South Africa, I bring a broad perspective to my work, informed by both my psychological background and a life full of diverse experiences.</p>
+        
+        <h2 class="section-title" style="margin: var(--spacing-2xl) 0;">Qualifications & Experience</h2>
+        <div class="psychologist-profile-qual-item">BA (Psychology Major), Rhodes University</div>
+        <div class="psychologist-profile-qual-item">Volunteer experience with Lifeline suicide hotline</div>
+        <div class="psychologist-profile-qual-item">Founder and owner of Eye-Dears (Art Business)</div>
+        <div class="psychologist-profile-qual-item">Extensive experience in cross-cultural life transitions</div>
+
+        <div style="margin-top: var(--spacing-4xl); text-align: center;">
+          <a href="index.html#services" class="btn btn-primary btn-xl">Book Consultation</a>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      const navToggle = document.getElementById("navToggle");
+      const closeToggle = document.getElementById("closeToggle");
+      const mobileOverlay = document.getElementById("mobileOverlay");
+      navToggle.addEventListener("click", () => { mobileOverlay.style.display = "flex"; });
+      closeToggle.addEventListener("click", () => { mobileOverlay.style.display = "none"; });
+    </script>
+</body>
 </html>
