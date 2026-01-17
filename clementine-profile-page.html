@@ -1,55 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <title>Clementine Profile - Reflect</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./index.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@300;400;600;800&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap" />
-    
-    <style>
-      .profile-header-container {
-        position: relative;
-        width: 100%;
-        height: 400px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        border-radius: var(--border-radius-lg);
-        background: url('https://images.pexels.com/photos/1028203/pexels-photo-1028203.jpeg?auto=compress&cs=tinysrgb&w=1500') center/cover no-repeat;
-      }
-      .profile-name-overlay {
-        color: white;
-        font-family: var(--font-family-heading);
-        font-weight: 800;
-        font-size: clamp(3rem, 10vw, 6rem);
-        text-shadow: 0px 10px 30px rgba(0, 0, 0, 0.7);
-        letter-spacing: 0.05em;
-        z-index: 2;
-      }
+
+    <style data-tag="reset-style-sheet">
+      html { line-height: 1.15;} body { margin: 0;} * { box-sizing: border-box; border-width: 0; border-style: solid; -webkit-font-smoothing: antialiased;} p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption { margin: 0; padding: 0;} button { background-color: transparent;} button,input,optgroup,select,textarea { font-family: inherit; font-size: 100%; line-height: 1.15; margin: 0;} button,select { text-transform: none;} button,[type="button"],[type="reset"],[type="submit"] { -webkit-appearance: button; color: inherit;} a { color: inherit; text-decoration: inherit;} img { display: block;} html { scroll-behavior: smooth }
+    </style>
+    <style data-tag="default-style-sheet">
+      html { font-family: Lato; font-size: 1rem; }
+      body { font-weight: 400; font-style:normal; letter-spacing: 0.01em; line-height: 1.6; color: var(--color-on-surface); background: var(--color-surface); fill: var(--color-on-surface); }
+      
+      /* THE CALMING HOVER FIX */
       .psychologist-profile-qual-item {
-        transition: all 0.3s ease;
-        background-color: var(--color-surface);
-        border: 1px solid var(--color-border);
-        padding: var(--spacing-md);
-        border-radius: var(--border-radius-md);
-        margin-bottom: var(--spacing-sm);
+        transition: all 0.4s ease;
+        background-color: white;
       }
       .psychologist-profile-qual-item:hover {
-        background-color: #bcd4d4 !important; /* Duck Egg Blue */
+        background-image: none !important;
+        background-color: #bcd4d4 !important;
         transform: translateY(-2px);
       }
-      .profile-main-content {
-        max-width: 800px;
-        margin: var(--spacing-4xl) auto;
-        padding: 0 var(--spacing-xl);
+
+      /* BOLDER NAME STYLE */
+      .profile-header-name {
+        color: white; 
+        font-family: 'Source Serif 4', serif; 
+        font-weight: 700; /* Bolder */
+        font-size: 4.5rem; 
+        text-shadow: 0px 4px 10px rgba(0,0,0,0.5), 0px 10px 20px rgba(0,0,0,0.3); /* Deeper shadows */
       }
     </style>
-</head>
-<body>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;0,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700&display=swap" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
     <header class="navigation-wrapper">
       <div class="navigation-container">
         <div class="navigation-left">
@@ -60,20 +48,18 @@
         </div>
         <div class="navigation-center">
           <a href="index.html" class="navigation-logo-link">
-            <div class="navigation-logo-content">
-              <span class="section-title">Reflect</span>
-            </div>
+            <div class="navigation-logo-content"><span class="section-title">Reflect</span></div>
           </a>
         </div>
         <div class="navigation-right">
           <ul class="navigation-list">
             <li class="navigation-item"><a href="services.html" class="navigation-link">Services</a></li>
-            <li class="navigation-item">
-              <a href="book.html" class="btn btn-primary btn-sm">Book Session</a>
-            </li>
+            <li class="navigation-item"><a href="book.html" class="btn btn-primary btn-sm">Book Session</a></li>
           </ul>
         </div>
-        <button id="navToggle" class="navigation-mobile-toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+        <button id="navToggle" class="navigation-mobile-toggle">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
       </div>
     </header>
 
@@ -91,32 +77,53 @@
       </div>
     </div>
 
-    <main class="profile-main-content">
-      <div class="profile-header-container">
-        <h1 class="profile-name-overlay">Clementine</h1>
-      </div>
+    <div>
+      <div class="clementine-profile-page-container1">
+        <div class="clementine-profile-container1">
+          <section class="psychologist-profile-section">
+            <div class="psychologist-profile-container">
+              <article class="psychologist-profile-card">
+                
+                <div class="psychologist-profile-visual"
+                  style="background-image: url('images/water-ripple.jpg'); background-size: cover; background-position: center; border-radius: 20px; height: 250px; display: flex; align-items: center; justify-content: center;">
+                  <h1 class="profile-header-name">Clementine</h1>
+                </div>
 
-      <div style="margin-top: var(--spacing-3xl);">
-        <p class="section-content">I work with young people navigating the early stages of adulthood. As someone who has experienced the discomfort of leaving school to pursue online studies during the pandemic, I understand the unique pressures of the modern world.</p>
-        
-        <h2 class="section-title" style="margin: var(--spacing-2xl) 0;">Qualifications & Experience</h2>
-        <div class="psychologist-profile-qual-item">BA (Psychology Major), Stellenbosch University</div>
-        <div class="psychologist-profile-qual-item">Teaching English as a foreign language (2024-2025)</div>
-        <div class="psychologist-profile-qual-item">Volunteering: Huis Horizon, Stellenbosch</div>
-        <div class="psychologist-profile-qual-item">Specialized focus on young adult identity and uncertainty</div>
+                <div class="psychologist-profile-content">
+                  <div class="psychologist-profile-intro">
+                    <span>Welcome! I'm Clementine, and I work with young people navigating the early stages of adulthood...</span>
+                  </div>
+                  <div class="clementine-profile-thq-psychologist-profile-about-elm">
+                    <h2 class="psychologist-profile-subsection-title">About Me</h2>
+                    <p class="psychologist-profile-bio">As someone who has experienced the discomfort of leaving school to pursue online studies during the Covid-19 pandemic...</p>
+                  </div>
+                  
+                  <h2 class="psychologist-profile-subsection-title">Qualifications &amp; Experience</h2>
+                  <div class="psychologist-profile-qualifications">
+                    <div class="psychologist-profile-qual-item"><span class="psychologist-profile-qual-text">BA (Psychology Major), Stellenbosch University</span></div>
+                    <div class="psychologist-profile-qual-item"><span class="psychologist-profile-qual-text">Teaching English as a foreign language (2024-2025)</span></div>
+                    <div class="psychologist-profile-qual-item"><span class="psychologist-profile-qual-text">Volunteering: Huis Horizon, Stellenbosch</span></div>
+                  </div>
 
-        <div style="margin-top: var(--spacing-4xl); text-align: center;">
-          <a href="index.html#services" class="btn btn-primary btn-xl">Book Consultation</a>
+                  <a href="index.html#services" style="text-decoration: none;">
+                    <div class="btn btn-primary psychologist-profile-cta">
+                      <span>Book Consultation</span>
+                    </div>
+                  </a>
+                </div>
+              </article>
+            </div>
+          </section>
         </div>
       </div>
-    </main>
+    </div>
 
     <script>
       const navToggle = document.getElementById("navToggle");
       const closeToggle = document.getElementById("closeToggle");
       const mobileOverlay = document.getElementById("mobileOverlay");
-      navToggle.addEventListener("click", () => { mobileOverlay.style.display = "flex"; });
-      closeToggle.addEventListener("click", () => { mobileOverlay.style.display = "none"; });
+      navToggle.addEventListener("click", () => mobileOverlay.style.display = "flex");
+      closeToggle.addEventListener("click", () => mobileOverlay.style.display = "none");
     </script>
-</body>
+  </body>
 </html>
