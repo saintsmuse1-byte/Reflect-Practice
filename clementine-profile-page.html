@@ -16,23 +16,49 @@
       .psychologist-profile-qual-item {
         transition: all 0.4s ease;
         background-color: white;
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 15px;
+        border-radius: 12px;
+        margin-bottom: 10px;
+        border: 1px solid #eee;
       }
       .psychologist-profile-qual-item:hover {
         background-image: none !important;
-        background-color: #bcd4d4 !important;
+        background-color: #bcd4d4 !important; /* Soft Duck Egg Blue */
         transform: translateY(-2px);
+      }
+      .qual-icon {
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+        margin-top: 3px;
+        fill: #555;
       }
 
       /* BOLDER NAME STYLE */
       .profile-header-name {
         color: white; 
         font-family: 'Source Serif 4', serif; 
-        font-weight: 700; /* Bolder */
-        font-size: 4.5rem; 
-        text-shadow: 0px 4px 10px rgba(0,0,0,0.5), 0px 10px 20px rgba(0,0,0,0.3); /* Deeper shadows */
+        font-weight: 700; 
+        font-size: clamp(3rem, 10vw, 4.5rem); 
+        text-shadow: 0px 4px 12px rgba(0,0,0,0.6), 0px 10px 25px rgba(0,0,0,0.4);
+      }
+
+      /* BOLD HEADINGS */
+      .psychologist-profile-subsection-title {
+        font-weight: 800 !important;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        font-family: 'Source Serif 4', serif;
+      }
+      
+      .psychologist-profile-bio {
+        margin-bottom: 20px;
       }
     </style>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;0,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;0,700;0,800&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700&display=swap" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./index.css" />
@@ -57,9 +83,7 @@
             <li class="navigation-item"><a href="book.html" class="btn btn-primary btn-sm">Book Session</a></li>
           </ul>
         </div>
-        <button id="navToggle" class="navigation-mobile-toggle">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-        </button>
+        <button id="navToggle" class="navigation-mobile-toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
       </div>
     </header>
 
@@ -90,19 +114,40 @@
                 </div>
 
                 <div class="psychologist-profile-content">
-                  <div class="psychologist-profile-intro">
-                    <span>Welcome! I'm Clementine, and I work with young people navigating the early stages of adulthood...</span>
+                  <div class="psychologist-profile-intro" style="margin-bottom: 30px;">
+                    <span>Welcome! I'm Clementine, and I work with young people navigating the early stages of adulthood: students, early-career adults, or anyone feeling a bit unsure about their direction. My sessions are a calm, supportive space where you can talk through challenges, reflect on choices and life in general, and gain perspective on everyday life in a way that enables higher levels of confidence and a sense of agency.</span>
                   </div>
-                  <div class="clementine-profile-thq-psychologist-profile-about-elm">
-                    <h2 class="psychologist-profile-subsection-title">About Me</h2>
-                    <p class="psychologist-profile-bio">As someone who has experienced the discomfort of leaving school to pursue online studies during the Covid-19 pandemic...</p>
-                  </div>
+
+                  <h2 class="psychologist-profile-subsection-title">About Me</h2>
+                  <p class="psychologist-profile-bio">As someone who has experienced the discomfort of leaving school to pursue online studies during the Covid-19 pandemic, leaving home for the first time to study far away as an 18 year old and is now about to engage myself in psychology honours (online, again!) as well as travelling overseas, I really understand the difficulties that one can face in coming to terms with different transitional challenges: the search for a new identity, losing friends, making new relationships and learning about what it means to become an adult in 2026. These are normal human, young adult experiences, but we often lack the support and advice we need during these times, which can make the experience unnecessarily difficult and turn int into a battle rather than a ladder to climb. I believe that having someone to hear your voice during the process can be a powerful tool to allow thriving and personal growth.</p>
                   
+                  <h2 class="psychologist-profile-subsection-title">My Approach</h2>
+                  <p class="psychologist-profile-bio">My degree gave me a strong foundation in understanding human behaviour and thought processes, which informs the way I guide conversations, and support reflection. I have interests in Existential Psychology, as well as Identity and Narrative psychology, which influence my session structure and the way I interact and care for those around me. Having worked with international students teaching English as a foreign language, I'm familiar with the emotional ups and downs of adjusting to new cultures and environments.</p>
+                  <p class="psychologist-profile-bio">I'm here to listen, provide space for reflection and help you feel less alone as you navigate life's small and big transitions. All sessions are online, relaxed and judgement free. We will go at your pace, and the focus is on whichever topics you wish to explore with me.</p>
+
                   <h2 class="psychologist-profile-subsection-title">Qualifications &amp; Experience</h2>
                   <div class="psychologist-profile-qualifications">
-                    <div class="psychologist-profile-qual-item"><span class="psychologist-profile-qual-text">BA (Psychology Major), Stellenbosch University</span></div>
-                    <div class="psychologist-profile-qual-item"><span class="psychologist-profile-qual-text">Teaching English as a foreign language (2024-2025)</span></div>
-                    <div class="psychologist-profile-qual-item"><span class="psychologist-profile-qual-text">Volunteering: Huis Horizon, Stellenbosch</span></div>
+                    
+                    <div class="psychologist-profile-qual-item">
+                      <svg class="qual-icon" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM3.89 9L12 4.57 20.11 9 12 13.43 3.89 9zM12 17l-6-3.27v2.36L12 19.5l6-3.41v-2.36L12 17z"/></svg>
+                      <span class="psychologist-profile-qual-text">BA (Psychology Major), Stellenbosch University</span>
+                    </div>
+
+                    <div class="psychologist-profile-qual-item">
+                      <svg class="qual-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                      <span class="psychologist-profile-qual-text">Teaching English as a foreign language, working with learners across Asia: Let's Talk (2024-2025).</span>
+                    </div>
+
+                    <div class="psychologist-profile-qual-item">
+                      <svg class="qual-icon" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                      <span class="psychologist-profile-qual-text">Volunteering: Huis Horizon, Stellenbosch (holistic care of adult people with primary intellectual disability)</span>
+                    </div>
+
+                    <div class="psychologist-profile-qual-item">
+                      <svg class="qual-icon" viewBox="0 0 24 24"><path d="M17.5 12c.83 0 1.5-.67 1.5-1.5S18.33 9 17.5 9 16 9.67 16 10.5s.67 1.5 1.5 1.5zm-5 0c.83 0 1.5-.67 1.5-1.5S13.33 9 12.5 9 11 9.67 11 10.5s.67 1.5 1.5 1.5zM9 9c-.83 0-1.5.67-1.5 1.5S8.17 12 9 12s1.5-.67 1.5-1.5S9.83 9 9 9zm11.23 2.19l-1.4-1.4c-.16-.16-.38-.26-.61-.26-.23 0-.45.1-.61.26l-1.4 1.4c-.34.34-.34.89 0 1.23.34.34.89.34 1.23 0l1.4-1.4c.16-.16.16-.43 0-.59l-1.4 1.4c-.34.34-.89.34-1.23 0-.34-.34-.34-.89 0-1.23l1.4-1.4c.16-.16.42-.16.58 0l1.4 1.4c.34.34.34.89 0 1.23zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+                      <span class="psychologist-profile-qual-text">Volunteering: SPCA, Howick and Amber Valley, Howick</span>
+                    </div>
+
                   </div>
 
                   <a href="index.html#services" style="text-decoration: none;">
