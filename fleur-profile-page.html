@@ -13,10 +13,21 @@
     <style data-tag="default-style-sheet">
       html { font-family: Lato; font-size: 1rem; }
       body { font-weight: 400; font-style:normal; letter-spacing: 0.01em; line-height: 1.6; color: var(--color-on-surface); background: var(--color-surface); fill: var(--color-on-surface); }
+      
+      /* THE CALMING HOVER FIX */
+      .psychologist-profile-qual-item {
+        transition: all 0.4s ease;
+        background-color: white; /* Base color */
+      }
+      .psychologist-profile-qual-item:hover {
+        background-image: none !important; /* Removes the ripple image on hover */
+        background-color: #bcd4d4 !important; /* Soft Duck Egg Blue */
+        transform: translateY(-2px);
+      }
     </style>
     <link rel="stylesheet" href="https://unpkg.com/animate.css@4.1.1/animate.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900&display=swap" data-tag="font" />
-    <link rel="stylesheet" href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;1,300&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700&display=swap" />
   </head>
   <body>
     <link rel="stylesheet" href="./style.css" />
@@ -30,9 +41,8 @@
                 <article class="psychologist-profile-card">
                   
                   <div class="fleur-profile-thq-psychologist-profile-visual-elm psychologist-profile-visual"
-                    style="background-image: url('images/lillies.jpg'); background-size: cover; background-position: center; border-radius: 20px; height: 200px; display: flex; align-items: center; justify-content: center; border: none;">
-                    <h1 class="fleur-profile-thq-psychologist-profile-hero-title-elm"
-                      style="color: white; font-size: 2rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
+                    style="background-image: url('images/lillies.jpg'); background-size: cover; background-position: center; border-radius: 20px; height: 220px; display: flex; align-items: center; justify-content: center; border: none;">
+                    <h1 style="color: white; font-family: 'Source Serif 4', serif; font-weight: 300; font-size: 4rem; text-shadow: 2px 2px 8px rgba(0,0,0,0.2);">
                       Fleur
                     </h1>
                   </div>
@@ -43,15 +53,12 @@
                     </div>
                     <div class="fleur-profile-thq-psychologist-profile-about-elm">
                       <h2 class="psychologist-profile-subsection-title">About Me</h2>
-                      <p class="fleur-profile-thq-psychologist-profile-bio-elm1 psychologist-profile-bio">I have lived and worked in the UK, France, Zimbabwe, and South Africa, experiences that have given me a broad cultural perspective and a deep respect for different life journeys. Alongside my personal roles as a mother, wife, and business owner, I bring a grounded, empathetic presence shaped by decades of navigating change, responsibility, and growth.</p>
+                      <p class="psychologist-profile-bio">I have lived and worked in the UK, France, Zimbabwe, and South Africa, experiences that have given me a broad cultural perspective and a deep respect for different life journeys. Alongside my personal roles as a mother, wife, and business owner, I bring a grounded, empathetic presence shaped by decades of navigating change, responsibility, and growth.</p>
                     </div>
                     <div class="fleur-profile-thq-psychologist-profile-approach-elm">
                       <h2 class="psychologist-profile-subsection-title">My Approach</h2>
-                      <div class="fleur-profile-thq-psychologist-profile-approach-content-elm">
-                        <p class="psychologist-profile-bio">My approach is calm, empathetic, and non-judgmental. I believe deeply in the importance of being heard and understood, especially during times of transition, uncertainty, or emotional overwhelm. I aim to provide a supportive space where clients can reflect, talk things through, and gain clarity at their own pace.</p>
-                        <p class="psychologist-profile-bio">In addition to emotional support, I am able to support individuals who are considering starting their own business or who are already self-employed and feeling unsure, overwhelmed, or isolated. Having run my own business for many years, I understand the practical and emotional challenges of entrepreneurship and can offer thoughtful guidance, encouragement, and perspective.</p>
-                        <p class="psychologist-profile-bio">My work is not about giving quick answers or telling people what to do, but about walking alongside them as they build confidence, resilience, and a clearer sense of direction.</p>
-                      </div>
+                      <p class="psychologist-profile-bio">My approach is calm, empathetic, and non-judgmental. I believe deeply in the importance of being heard and understood, especially during times of transition, uncertainty, or emotional overwhelm. I aim to provide a supportive space where clients can reflect, talk things through, and gain clarity at their own pace.</p>
+                      <p class="psychologist-profile-bio">In addition to emotional support, I am able to support individuals who are considering starting their own business or who are already self-employed and feeling unsure, overwhelmed, or isolated.</p>
                     </div>
                     <div class="fleur-profile-thq-psychologist-profile-qualifications-section-elm">
                       <h2 class="psychologist-profile-subsection-title">Qualifications &amp; Experience</h2>
@@ -66,18 +73,13 @@
                            <span class="psychologist-profile-qual-text">Microsoft Certified Systems Engineer (IT Manager)</span>
                         </div>
                         <div class="psychologist-profile-qual-item">
-                           <span class="psychologist-profile-qual-text">Account Executive at Ogilvie &amp; Mather, Harare</span>
-                        </div>
-                        <div class="psychologist-profile-qual-item">
                            <span class="psychologist-profile-qual-text">Founder and owner of Eye-Dears (Art Business)</span>
                         </div>
                       </div>
                     </div>
                     <a href="Book.html">
-                      <div class="fleur-profile-thq-psychologist-profile-cta-link-elm">
-                        <div class="btn btn-primary psychologist-profile-cta">
-                          <span>Book Consultation</span>
-                        </div>
+                      <div class="btn btn-primary psychologist-profile-cta">
+                        <span>Book Consultation</span>
                       </div>
                     </a>
                   </div>
